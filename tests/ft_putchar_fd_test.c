@@ -13,7 +13,7 @@
 /*	42 libft tester | ft_putchar_fd
  *
  *	Writes in test.txt with ft_putchar_fd, reads it back and checks that
- *	exactly 1 byte was written, equal to c. test. txt  is deleted at the end.
+ *	exactly 1 byte was written, equal to c. test.txt  is deleted at the end.
  *	Cases tested :
  *	1. normal char;
  * 	2. new line;

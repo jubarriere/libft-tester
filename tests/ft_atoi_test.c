@@ -14,8 +14,8 @@
  *
  *	Compares ft_atoi with the libc atoi.
  *	Cases tested :
- *	1. number positif;
- *	2. number negatif;
+ *	1. number positive;
+ *	2. number negative;
  *	3. explicit + sign;
  *	4. zero;
  *	5. negative zero;

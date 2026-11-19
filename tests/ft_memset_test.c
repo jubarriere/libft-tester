@@ -24,8 +24,7 @@
  *	8. c = 128 (max signed char + 1);
  *	9. c = 255 (max unsigned char);
  *	10. c > 255 only the low byte is kept
- *	11. c = 127 (max signed char);
- *	12. c < 0 : -1 becomes 0xFF;
+ *	11. c < 0 : -1 becomes 0xFF;
  *	n larger than buffer is not tested : undefined behaviour.
  */
 
@@ -59,7 +58,6 @@ void	ft_memset_test(void)
 	i = i + ft_check_memset(0, 200);
 	i = i + ft_check_memset(127, 200);
 	i = i + ft_check_memset(128, 200);
-	i = i + ft_check_memset(255, 200);
 	i = i + ft_check_memset(255, 200);
 	i = i + ft_check_memset(255 + 'A', 200);
 	i = i + ft_check_memset(-1, 200);

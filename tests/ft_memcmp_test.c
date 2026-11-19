@@ -12,7 +12,7 @@
 
 /*	42 libft tester | ft_memcmp
  *
- *	Compares ft_memchr with the libc memcmp.
+ *	Compares ft_memcmp with the libc memcmp.
  *	Cases tested :
  *	1. identical memory areas;
  *	2. different before n;

@@ -20,7 +20,7 @@
  *	4. \0 in the middle : stops at the first \0;
  *	5. special characters (\t, \n);
  *	6. long string (9999 chars);
- *	NULL is not tested : the libc strlen crahes too.
+ *	NULL is not tested : the libc strlen crashes too.
  */
 
 #include "../tester.h"

@@ -18,11 +18,9 @@
  *	2. s1 empty, return ("" not NULL);
  *	3. s2 empty, return ("" not NULL);
  *	4. both empty, return ("" not NULL);
- *	5. \0 in the middle of s1;
- *	6. start = lenght : empty string;
- *	7. start after the end : empty string;
- *	8. special chars and byte > 127;
- *	9. s1 = NULL, s2 = NULL, both NULL : returns NULL
+ *	5. \0 in the middle of s1 : stops here;
+ *	6. special chars and byte > 127;
+ *	7. s1 = NULL, s2 = NULL, both NULL : returns NULL
  */
 
 #include "../tester.h"

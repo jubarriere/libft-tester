@@ -40,6 +40,7 @@ static int	ft_check_putendl_fd(char *s, char *expected)
 	if (fd == -1)
 		return (1);
 	n_read = read(fd, buf, 99);
+	close(fd);
 	if (n_read < 0)
 		return (1);
 	buf[n_read] = '\0';

@@ -17,9 +17,9 @@
  *	1. c in last position;
  *	2. c in first position;
  *	3. c in middle position;
- *	4. several occurences, must find the first one;
+ *	4. several occurences, must find the last one;
  *	5. c not found : NULL;
- *	6. c = '\0' : must find the adresse of the final \0;
+ *	6. c = '\0' : must find the adress of the final \0;
  *	7. empty string;
  *	8. c > 255, one byte kept
  */
