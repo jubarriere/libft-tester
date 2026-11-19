@@ -23,8 +23,8 @@
 
 #include "../tester.h"
 
-void	ft_create_nodes(t_list **head, t_list **node_a, t_list **node_b,
-		t_list **node_c)
+void	ft_create_nodes(t_list **head, t_list **node_a,
+		t_list **node_b, t_list **node_c)
 {
 	*head = NULL;
 	*node_a = ft_lstnew("a");
@@ -32,18 +32,24 @@ void	ft_create_nodes(t_list **head, t_list **node_a, t_list **node_b,
 	*node_c = ft_lstnew("c");
 }
 
-void	ft_free_nodes(t_list *node_a, t_list *node_b, t_list *node_c)
-{
-	free(node_a);
-	free(node_b);
-	free(node_c);
-}
-
-void	ft_create_nodes_alloc(t_list **head, t_list **node_a, t_list **node_b,
-		t_list **node_c)
+void	ft_create_nodes_alloc(t_list **head, t_list **node_a,
+		t_list **node_b, t_list **node_c)
 {
 	*head = NULL;
+	*node_a = NULL;
+	*node_b = NULL;
+	*node_c = NULL;
 	*node_a = ft_lstnew(strdup("a"));
 	*node_b = ft_lstnew(strdup("b"));
 	*node_c = ft_lstnew(strdup("c"));
+}
+
+void	ft_free_nodes(t_list *node_a, t_list *node_b, t_list *node_c)
+{
+	if (node_a)
+		free(node_a);
+	if (node_b)
+		free(node_b);
+	if (node_c)
+		free(node_c);
 }

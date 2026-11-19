@@ -48,7 +48,7 @@ void	ft_bzero_test(void)
 	i = i + ft_check_bzero(1);
 	i = i + ft_check_bzero(0);
 	if (i != 0)
-		write(1, "ft_bzero : K0\n", 14);
+		write(1, "ft_bzero : KO\n", 14);
 	else
 		write(1, "ft_bzero : OK\n", 14);
 }

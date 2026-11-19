@@ -21,7 +21,7 @@
  *	5. size = 0;
  *	6. both = 0;
  *	7. overflow (SIZE_MAX * 2) : must return (NULL);
- *	Run make : Valgring must report leaks.
+ *	Run make : Valgrind must report leaks.
  */
 
 #include "../tester.h"
@@ -35,9 +35,16 @@ static int	ft_check_calloc(size_t n, size_t size)
 	ft_ret = ft_calloc(n, size);
 	libc_ret = calloc(n, size);
 	result = 0;
-	if ((ft_ret == NULL && libc_ret != NULL) || (ft_ret != NULL
-			&& libc_ret == NULL) || (ft_ret != NULL && libc_ret != NULL
-			&& memcmp(ft_ret, libc_ret, n * size) != 0))
+	if (size != 0 && n > SIZE_MAX / size)
+	{
+		if (ft_ret != NULL || libc_ret != NULL)
+			result = 1;
+	}
+	else if ((ft_ret == NULL && libc_ret != NULL)
+		|| (ft_ret != NULL && libc_ret == NULL))
+		result = 1;
+	else if (ft_ret != NULL
+		&& memcmp(ft_ret, libc_ret, n * size) != 0)
 		result = 1;
 	free(ft_ret);
 	free(libc_ret);
@@ -57,7 +64,7 @@ void	ft_calloc_test(void)
 	i = i + ft_check_calloc(0, 0);
 	i = i + ft_check_calloc(SIZE_MAX, 2);
 	if (i != 0)
-		write(1, "ft_calloc : K0\n", 15);
+		write(1, "ft_calloc : KO\n", 15);
 	else
 		write(1, "ft_calloc : OK\n", 15);
 }

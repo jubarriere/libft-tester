@@ -77,6 +77,7 @@ void	ft_split_test(void)
 	char	*expected3[] = {NULL};
 	char	*expected4[] = {"a", "b", "c", NULL};
 	char	*expected5[] = {"a", NULL};
+	char	*wrong;
 
 	i = 0;
 	i = i + ft_check_split("hello world", ' ', expected1);
@@ -88,8 +89,12 @@ void	ft_split_test(void)
 	i = i + ft_check_split("hello\0", '\0', expected2);
 	i = i + ft_check_split("a", ' ', expected5);
 	i = i + ft_check_split("  a  ", ' ', expected5);
-	if (ft_split(NULL, ' ') != NULL)
+	wrong = ft_split(NULL, ' ');
+	if (wrong != NULL)
+	{
+		ft_free_tab(wrong);
 		i = 1;
+	}
 	if (i != 0)
 		write(1, "ft_split : KO\n", 14);
 	else

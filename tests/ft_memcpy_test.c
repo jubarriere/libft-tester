@@ -58,7 +58,7 @@ void	ft_memcpy_test(void)
 	i = i + ft_check_memcpy("", 1);
 	i = i + ft_check_memcpy("", 0);
 	if (i != 0)
-		write(1, "ft_memcpy : K0\n", 15);
+		write(1, "ft_memcpy : KO\n", 15);
 	else
 		write(1, "ft_memcpy : OK\n", 15);
 }
