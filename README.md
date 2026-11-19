@@ -4,7 +4,7 @@
 
 ## Description
 
-Libft Tester is a tester for the 42 Libft project. It checks the 43 functions of the library (libc functions, additionals functions and linked lists) and detects memory leaks with Valgrind.
+Libft Tester is a tester for the 42 Libft project. It checks the 43 functions of the library (libc functions, additional functions and linked lists) and detects memory leaks with Valgrind.
 
 ### Features
 
