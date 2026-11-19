@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*	42 libft tester | ft_isdigit
+ *
+ *	Compares ft_isdigit with the libc isdigit
+ *	for every value from -1 (EOF) to 255.
+ *	Only checks whether both results are zero or non-zeros :
+ *	the libc may return any non-zero value for "true".
+ */
+
 #include "../tester.h"
 
 void	ft_isdigit_test(void)
@@ -36,5 +44,5 @@ void	ft_isdigit_test(void)
 		}
 		i++;
 	}
-	write(1, "ft_isdigit : OK\n", 16); 
+	write(1, "ft_isdigit : OK\n", 16);
 }

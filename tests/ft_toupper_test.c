@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*	42 libft tester | ft_toupper
+ *
+ *	Compares ft_toupper with the libc toupper for every value from
+		-1 (EOF) to 255.
+ *	Characters outside the letter range must be returned unchanged.
+ */
+
 #include "../tester.h"
 
 void	ft_toupper_test(void)

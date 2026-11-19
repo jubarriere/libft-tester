@@ -10,12 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*	42 libft tester | ft_isalpha
+ *
+ *	Compares ft_isalpha with the libc isalpha
+ *	for every value from -1 (EOF) to 255.
+ *	Only checks whether both results are zero or non-zeros :
+ *	the libc may return any non-zero value for "true".
+ */
+
 #include "../tester.h"
 
 void	ft_isalpha_test(void)
 {
 	int	i;
-	
+
 	i = -1;
 	while (i <= 255)
 	{
@@ -27,7 +35,7 @@ void	ft_isalpha_test(void)
 		if (isalpha(i) == 0 && ft_isalpha(i) != 0)
 		{
 			write(1, "ft_isalpha : KO\n", 16);
-			return ;	
+			return ;
 		}
 		if (isalpha(i) != 0 && ft_isalpha(i) == 0)
 		{

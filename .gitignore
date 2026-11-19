@@ -54,5 +54,6 @@ dkms.conf
 # debug information files
 *.dwo
 
-# Tester executable
+# Tester files
 tester
+test.txt

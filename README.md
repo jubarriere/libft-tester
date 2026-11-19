@@ -4,7 +4,7 @@
 
 ## Description
 
-Libft Tester is a tester for the 42 Libft project. It checks the 43 functions of the library (libc functions, additionales functions and linked lists) and detects memory leaks with Valgrind.
+Libft Tester is a tester for the 42 Libft project. It checks the 43 functions of the library (libc functions, additionals functions and linked lists) and detects memory leaks with Valgrind.
 
 ### Features
 
@@ -49,7 +49,7 @@ The tester expects `libft.a` and `libft.h` in the parent folder. If `libft.a` do
 make        #build the tester and run the tests under valgrind
 make fast   #build the tester and run the tests without valgrind
 make clean  #remove the tester
-make re     #rebuild the tester and run the tests
+make re     #rebuild the tester and run the tests under valgrind
 ```
 The tester is compiled with `-Wall -Wextra -Werror -g`, the header is searched in the parent folder, and the program is linked with the libft archive from the parent folder.
 
@@ -70,11 +70,11 @@ ft_isdigit : OK
 ```
 Each function prints `OK` if it passed all the tests, `KO` if not.
 
-`make leaks` runs valgrind in quiet mode (-q), it only prints memory errors and leaks. If nothing but the test result is displayed, the functions have no leaks or invalid memory access.
+`make` runs valgrind in quiet mode (-q), it only prints memory errors and leaks. If nothing but the test result is displayed, the functions have no leaks or invalid memory access.
 
 
 ## Resources
-- The 42 Libft subject for the expected behavior of each functions;
+- The 42 Libft subject for the expected behavior of each function;
 - All the `man` pages (`man strcpy`, `man memmove`, etc.).
 
 ### AI usage

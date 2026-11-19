@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*	42 libft tester | ft_isalnum
+ *
+ *	Compares ft_isalnum with the libc isalnum
+ *	for every value from -1 (EOF) to 255.
+ *	Only checks whether both results are zero or non-zeros :
+ *	the libc may return any non-zero value for "true".
+ */
+
 #include "../tester.h"
 
 void	ft_isalnum_test(void)

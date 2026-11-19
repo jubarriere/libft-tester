@@ -6,18 +6,22 @@
 /*   By: julbarri <julbarri@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 11:02:46 by julbarri          #+#    #+#             */
-/*   Updated: 2026/11/04 21:09:22 by julbarri         ###   ########.fr       */
+/*   Updated: 2026/11/19 23:23:07 by julbarri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TESTER_H
 # define TESTER_H
 
-#include <ctype.h>
-#include <stddef.h>
-#include <unistd.h>
-#include <string.h>
-#include "../libft.h"
+# include <ctype.h>
+# include <fcntl.h>
+# include <stddef.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
+# include <stdint.h>
+# include "../libft.h"
 
 /* Part 1 - Libc functions */
 void	ft_isalpha_test(void);
@@ -67,5 +71,12 @@ void	ft_lstdelone_test(void);
 void	ft_lstclear_test(void);
 void	ft_lstiter_test(void);
 void	ft_lstmap_test(void);
+
+/* Part 4 - Linked list utils */
+void	ft_free_nodes(t_list *node_a, t_list *node_b, t_list *node_c);
+void	ft_create_nodes(t_list **head, t_list **node_a, t_list **node_b,
+			t_list **node_c);
+void	ft_create_nodes_alloc(t_list **head, t_list **node_a, t_list **node_b,
+			t_list **node_c);
 
 #endif

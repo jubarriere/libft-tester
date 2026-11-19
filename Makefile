@@ -6,7 +6,7 @@
 #    By: julbarri <julbarri@learner.42.tech>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/03 17:24:02 by julbarri          #+#    #+#              #
-#    Updated: 2026/11/04 21:33:33 by julbarri         ###   ########.fr        #
+#    Updated: 2026/11/14 17:37:01 by julbarri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = tester
 CC = cc
 HEADER = ../libft.h
 LIBFT = ../libft.a
-FLAGS = -Werror -Wall -Werror -g
+FLAGS = -Werror -Wall -Wextra -g
 SRCS =	main.c				\
 	./tests/ft_isalpha_test.c	\
 	./tests/ft_isdigit_test.c	\
@@ -58,7 +58,8 @@ SRCS =	main.c				\
 	./tests/ft_lstdelone_test.c	\
 	./tests/ft_lstclear_test.c	\
 	./tests/ft_lstiter_test.c	\
-	./tests/ft_lstmap_test.c
+	./tests/ft_lstmap_test.c	\
+	./tests/ft_lst_utils.c
 
 all : $(NAME)
 	valgrind -q --leak-check=full --show-leak-kinds=all ./$(NAME)

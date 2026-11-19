@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*	42 libft tester | ft_tolower
+ *
+ *	Compares ft_tolower with the libc tolower for every value from
+		-1 (EOF) to 255.
+ *	Characters outside the letter range must be returned unchanged.
+ */
+
 #include "../tester.h"
 
 void	ft_tolower_test(void)

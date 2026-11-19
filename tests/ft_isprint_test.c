@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*	42 libft tester | ft_isprint
+ *
+ *	Compares ft_isprint with the libc isprint
+ *	for every value from -1 (EOF) to 255.
+ *	Only checks whether both results are zero or non-zeros :
+ *	the libc may return any non-zero value for "true".
+ */
+
 #include "../tester.h"
 
 void	ft_isprint_test(void)
