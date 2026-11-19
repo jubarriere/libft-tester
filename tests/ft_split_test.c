@@ -6,7 +6,7 @@
 /*   By: julbarri <julbarri@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 23:15:23 by julbarri          #+#    #+#             */
-/*   Updated: 2026/11/18 23:48:01 by julbarri         ###   ########.fr       */
+/*   Updated: 2026/11/20 00:21:54 by julbarri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	ft_split_test(void)
 	char	*expected3[] = {NULL};
 	char	*expected4[] = {"a", "b", "c", NULL};
 	char	*expected5[] = {"a", NULL};
-	char	*wrong;
+	char	**wrong;
 
 	i = 0;
 	i = i + ft_check_split("hello world", ' ', expected1);
