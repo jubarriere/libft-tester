@@ -62,7 +62,7 @@ void	ft_strdup_test(void)
 	i = i + ft_check_strdup("\t\n");
 	i = i + ft_check_strdup("\200");
 	if (i != 0)
-		write(1, "ft_strdup : K0\n", 15);
+		write(1, "ft_strdup : KO\n", 15);
 	else
 		write(1, "ft_strdup : OK\n", 15);
 }

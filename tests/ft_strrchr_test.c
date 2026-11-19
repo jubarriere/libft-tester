@@ -53,7 +53,7 @@ void	ft_strrchr_test(void)
 	i = i + ft_check_strrchr("", 'h');
 	i = i + ft_check_strrchr("hello", 256 + 'h');
 	if (i != 0)
-		write(1, "ft_strrchr : K0\n", 16);
+		write(1, "ft_strrchr : KO\n", 16);
 	else
 		write(1, "ft_strrchr : OK\n", 16);
 }

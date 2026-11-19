@@ -28,7 +28,7 @@ void	ft_toupper_test(void)
 	{
 		if (ft_toupper(i) != toupper(i))
 		{
-			write(1, "ft_toupper : K0\n", 16);
+			write(1, "ft_toupper : KO\n", 16);
 			return ;
 		}
 		i++;

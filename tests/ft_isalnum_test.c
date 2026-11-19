@@ -29,17 +29,17 @@ void	ft_isalnum_test(void)
 	{
 		if (ft_isalnum(i) != 0 && ft_isalnum(i) != 1)
 		{
-			write(1, "ft_isalnum : K0\n", 16);
+			write(1, "ft_isalnum : KO\n", 16);
 			return ;
 		}
 		if (ft_isalnum(i) != 0 && isalnum(i) == 0)
 		{
-			write(1, "ft_isalnum : K0\n", 16);
+			write(1, "ft_isalnum : KO\n", 16);
 			return ;
 		}
 		if (ft_isalnum(i) == 0 && isalnum(i) != 0)
 		{
-			write(1, "ft_isalnum : K0\n", 16);
+			write(1, "ft_isalnum : KO\n", 16);
 			return ;
 		}
 		i++;
