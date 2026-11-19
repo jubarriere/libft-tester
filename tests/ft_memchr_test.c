@@ -57,7 +57,7 @@ void	ft_memchr_test(void)
 	i = i + ft_check_memchr("hello", 256 + 'l', 5);
 	i = i + ft_check_memchr("ab\200cd", '\200', 5);
 	if (i != 0)
-		write(1, "ft_strncmp : KO\n", 16);
+		write(1, "ft_memchr : KO\n", 15);
 	else
-		write(1, "ft_strncmp : OK\n", 16);
+		write(1, "ft_memchr : OK\n", 15);
 }
