@@ -21,6 +21,9 @@
  *	5. c = '\0' : must find the adresse of the final \0;
  *	6. empty string;
  *	7. c > 255, one byte kept
+ *	8. same byte > 127 (\xfe) searched with c = 254;
+ *	9. same byte > 127 (\xfe) searched with a negative c (-2);
+ *	10. same byte > 127 (\xfe) searched with c > 255 (254 + 256);
  */
 
 #include "../tester.h"
@@ -50,6 +53,9 @@ void	ft_strchr_test(void)
 	i = i + ft_check_strchr("hello", '\0');
 	i = i + ft_check_strchr("", 'h');
 	i = i + ft_check_strchr("hello", 256 + 'h');
+	i = i + ft_check_strchr("abc\xfe", 254);
+	i = i + ft_check_strchr("abc\xfe", -2);
+	i = i + ft_check_strchr("abc\xfe", 254 + 256);
 	if (i != 0)
 		write(1, "ft_strchr : KO\n", 15);
 	else

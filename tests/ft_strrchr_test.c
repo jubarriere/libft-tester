@@ -17,11 +17,14 @@
  *	1. c in last position;
  *	2. c in first position;
  *	3. c in middle position;
- *	4. several occurences, must find the last one;
+ *	4. several occurrences, must find the last one;
  *	5. c not found : NULL;
- *	6. c = '\0' : must find the adress of the final \0;
+ *	6. c = '\0' : must find the address of the final \0;
  *	7. empty string;
- *	8. c > 255, one byte kept
+ *	8. c > 255, only the low byte kept;
+ *	9. same byte > 127 (\xfe) searched with c = 254;
+ *	10. same byte > 127 (\xfe) searched with a negative c (-2);
+ *	11. same byte > 127 (\xfe) searched with c > 255 (254 + 256);
  */
 
 #include "../tester.h"
@@ -52,6 +55,9 @@ void	ft_strrchr_test(void)
 	i = i + ft_check_strrchr("hello", '\0');
 	i = i + ft_check_strrchr("", 'h');
 	i = i + ft_check_strrchr("hello", 256 + 'h');
+	i = i + ft_check_strrchr("abc\xfe", 254);
+	i = i + ft_check_strrchr("abc\xfe", -2);
+	i = i + ft_check_strrchr("abc\xfe", 254 + 256);
 	if (i != 0)
 		write(1, "ft_strrchr : KO\n", 16);
 	else
